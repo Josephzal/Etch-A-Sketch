@@ -1,0 +1,84 @@
+@font-face {font-family: Audiowide; src: url('Audiowide-Regular.ttf')}
+html {
+    font-size: 10px;
+    background: url('background.jpg') top center;
+    background-size: cover
+    
+}
+h1{
+    font-family: Audiowide;
+    color: rgb(205, 43, 226);
+    font-size: 500%;
+    text-align: center;
+}
+#grid {
+    border-color: rgb(205, 43, 226);
+    background-color: black;
+    position: relative; 
+    border-radius: 10px;
+    bottom: 150px;
+    width: 720px;
+    height: 620px;
+    box-shadow: 0px 0px 12px 10px rgb(205, 43, 226);
+    display:grid;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+}
+.gridItem {
+    background-color: rgb(8, 8, 70);
+    border-color: rgb(205, 43, 226);
+    box-shadow: 0px 0px 1px px rgb(228, 155, 243);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 1px;
+    border-radius: 3px;
+}
+.gridItemGlow {
+    
+    background-color:rgb(205, 43, 226); 
+}
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    
+    padding: 10px;
+}
+.hover {
+    background-color:rgb(205, 43, 226);
+    
+}
+.glowing {
+    transform: scale(1.1);
+    border-color: rgb(205, 43, 226);
+    box-shadow: 0 0 1rem rgb(205, 43, 226);
+  }
+
+#output {
+    
+}  
+
+.controls {
+    position:relative;
+    top: 300px;
+    left: 300px;
+}
+.controlText{
+    font-family:Audiowide;
+    color: rgb(205, 43, 226);
+    font-size: x-large;
+}
+#output {
+    position:relative;
+    left: 70px;
+}
+#sizeText{
+    position:relative;
+    left: 26px;
+}
+ 

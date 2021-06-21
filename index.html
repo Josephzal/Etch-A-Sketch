@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			    crossorigin="anonymous"></script>
+  <title>Etch A Sketch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<<h1>Synth a Sketch</h1>>
+<div>
+<div class="controls">
+  <div id="sizeText" class="controlText">Set size</div>
+  <input id="input" type="range" min="0" value="0" max="5" step="1">
+  <div id="output" class="controlText"></div>
+</div>
+
+<div class="container">
+  <div class="grid-container" id="grid">
+  </div>
+</div>
+</div>
+
+<script>
+var e = document.getElementsByClassName("grid-container")[0];
+var sliderValues = [2, 4, 8, 16, 32, 64];
+var gridNums = 32;
+var input = document.getElementById('input'),
+    output = document.getElementById('output');
+input.oninput = function() {
+  gridNums = sliderValues[this.value];
+  output.innerHTML = gridNums;
+  
+  resetGrid();
+  
+  createGrid(gridNums);
+  updateGrid(gridNums);
+  $(".gridItem").on('mouseover', function () {
+    $(this).addClass("hover");
+    $(this).animate({boxShadow: "0px 0px 5px 3px white"})
+    .delay(1000)
+    .animate({boxShadow: "white"})
+  });
+};
+input.oninput();
+
+  function resetGrid() {
+    while(e.firstChild) {
+      e.removeChild(e.firstChild);
+    }
+  }
+
+  function createGrid(nums) {
+    for(let i = 0; i < (nums*nums); i++) {
+      var row = document.createElement("div");
+      row.className = "gridItem";
+       
+        e.appendChild(row);
+    }
+  };
+                            
+  function updateGrid(nums){
+  
+  document.getElementById("grid").style.gridTemplateColumns = "repeat("+nums+", 2fr)";
+  document.getElementById("grid").style.gridTemplateRows = "repeat("+nums+", 2fr)";
+  };
+
+  </script>
+
+
+
+ 
+</body>
+</html>
