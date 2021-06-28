@@ -1,6 +1,5 @@
 // Variables
 
-
 var w = document.getElementById('whole')
 var color = "original";
 var e = document.getElementsByClassName("grid-container")[0];
@@ -14,7 +13,6 @@ input.oninput = function() {
   // Determine what value is chosen from slider
   gridNums = sliderValues[this.value];
  
-  
   // Functions will reset grid and create a new one
   // based on the selected number via slider
   

@@ -13,25 +13,29 @@
 </head>
 
 <body>
-<div id="wrap"></div>
-<h1>Synth a Sketch</h1>
-<!-- Buttons -->
-  <button class="btns" id="eraseButton" onclick="eraser()">Erase</button>
-  <button class="btns" id="originalButton" onclick="original()">Original</button>
-  <button class="btns" id="randomButton" onclick="randomColor()">Random</button>
+<div id="wrapper">
+  <h1>Synth a Sketch</h1>
 
-<!-- Slider control -->
-<div class="controls">
-  <div id="sizeText" class="controlText">Pixel size</div>
-  <input id="input" type="range" min="0" value="0" max="5" step="1">
-</div>
+
+  <!-- Slider control -->
+  <div class="controls">
+    <div id="sizeText" class="controlText">Pixel size</div>
+    <input id="input" type="range" min="0" value="0" max="5" step="1">
+  </div>
 
 <!-- Grid -->
-<div class="container">
-  <div class="grid-container" id="grid">
+  <div class="container">
+    <div class="grid-container" id="grid"></div>
+  </div>
+
+<!-- Buttons -->
+  <div class="btns">
+    <button class="hbtn" id="originalButton" onclick="original()">Original</button>
+    <button class="hbtn" id="randomButton" onclick="randomColor()">Random</button>
+    <button class="hbtn" id="eraseButton" onclick="eraser()">Erase</button>
   </div>
 </div>
-</div>
+
 
 </body>
 
