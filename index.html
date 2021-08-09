@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-			    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-          crossorigin="anonymous">
-  </script>
-  
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous">
+
   <title>Synth A Sketch</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-<div id="wrapper">
-  <h1>Synth a Sketch</h1>
+  <section id="wrap" class="container-fluid px-0 main-img">
+    <div class="row align-items-center">
+      <h1 class="text-center">Synth a Sketch</h1>
 
+      <!-- Slider control -->
+      <div class="controls col-lg-3 order-1" align="center">
+        <div id="sizeText" class="controlText">Pixel size</div>
+        <input id="input" type="range" min="0" value="0" max="5" step="1">
+      </div>
 
-  <!-- Slider control -->
-  <div class="controls">
-    <div id="sizeText" class="controlText">Pixel size</div>
-    <input id="input" type="range" min="0" value="0" max="5" step="1">
-  </div>
+      <!-- Grid -->
+      <div class="gridSpace col-lg-6 order-3 order-lg-2" align="center">
+        <div class="grid-container" id="grid"></div>
+      </div>
 
-<!-- Grid -->
-  <div class="container">
-    <div class="grid-container" id="grid"></div>
-  </div>
+      <!-- Buttons -->
+      <div class="btns col-lg-3 order-2 order-lg-3" align="center">
+        <button class="hbtn" id="originalButton" onclick="original()">Original</button>
+        <button class="hbtn" id="randomButton" onclick="randomColor()">Random</button>
+        <button class="hbtn" id="eraseButton" onclick="eraser()">Erase</button>
+      </div>
+    </div>
+  </section>
 
-<!-- Buttons -->
-  <div class="btns">
-    <button class="hbtn" id="originalButton" onclick="original()">Original</button>
-    <button class="hbtn" id="randomButton" onclick="randomColor()">Random</button>
-    <button class="hbtn" id="eraseButton" onclick="eraser()">Erase</button>
-  </div>
-</div>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+  crossorigin="anonymous"></script>
 </body>
 
 <script src="scripts/script.js"></script>
+
 </html>
